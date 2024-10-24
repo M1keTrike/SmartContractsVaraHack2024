@@ -5,6 +5,10 @@ edition.workspace = true
 license.workspace = true
 
 [dependencies]
-gstd.workspace = true
-sails-rs.workspace = true
-keyring-service.workspace = true
+scale-info = "2.11.3"
+gstd = { workspace = true }   # Asegúrate de que gstd esté en tu workspace
+gmeta = "0.3"                 # Agrega gmeta si es necesario
+gear-wasm-builder = "0.1"     # Agrega gear-wasm-builder si es necesario
+nft_io = { path = "../path_to_nft_io" }  # Ajusta según la ubicación real del módulo
+auction_io = { path = "../path_to_auction_io" }  # Ajusta según la ubicación real del módulo
+primitive-types = "0.10"      # Añade primitive-types si lo necesitas

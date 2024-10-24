@@ -1,4 +1,12 @@
+#![no_std]
 
+pub mod services;
+pub mod states;
 
+use gear_wasm_builder::WasmBuilder; 
 
-// Add your program code
+fn main() {
+    WasmBuilder::with_meta(states::state::AuctionMetadata::repr())
+        .exclude_features(["binary-vendor"])
+        .build();
+}
